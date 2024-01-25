@@ -29,3 +29,4 @@ yarn dev
 # Todo
 - Refactor messy codes
 - Store the histories of prompt and answers into local storage.
+- Implement `options.html` for dynamic configuration such as window size, display position and so forth.
