@@ -1,0 +1,14 @@
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+}
+
+.popup {
+  background-color: #121212;
+  color: white;
+  width: 200px;
+  height: 150px;
+  text-align: "center";
+  padding-top: 50px;
+}
