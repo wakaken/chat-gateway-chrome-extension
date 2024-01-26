@@ -12,8 +12,8 @@ yarn install
 ```sh
 yarn dev
 ```
-4. Open `chrome://extensions/`` in your Chrome browser and enable developer mode.
-5. Click "Load unpackaged" and select the folder for the built extension. The folder for the buld extension is `dist`.
+4. Open `chrome://extensions/` in your Chrome browser and enable developer mode.
+5. Click `Load unpackaged` and select the folder for the built extension. The folder for the buld extension is `dist`.
 
 # How to use
 1. Open popup from Chrome and a small window will open.
@@ -24,9 +24,11 @@ yarn dev
 6. The answers are sent back to the chat-gateway window and will be displayed in each response area.
 
 # Notes
+- Please sign in to each service before using this extension.
 - This extension is still under development. New functionality might be added if you have need.
 
 # Todo
 - Refactor messy codes
-- Store the histories of prompt and answers into local storage.
-- Implement `options.html` for dynamic configuration such as window size, display position and so forth.
+- Store the histories of prompt and answers into local storage
+- Implementation of `options.html` for dynamic configuration such as window size, display position and so forth
+- Supporting other AI service like Perplexity AI. Let me know if you know some good services.
