@@ -23,9 +23,10 @@ export const PromptModal: React.FC<{
       setCopyLabel("Done ✔️");
       setTimeout(() => {
         setCopyLabel("Copy");
-      }, 1000);
+      }, 500);
     }
   };
+
   return (
     <>
       <Modal show={props.showModal} onHide={handleCloseModal} centered>

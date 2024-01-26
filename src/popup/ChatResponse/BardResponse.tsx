@@ -8,6 +8,7 @@ import {
   Status,
 } from "../../utils/utils";
 import { ChromeTabs } from "../types";
+import { ResponseTitle } from "../components/ResponseTitle";
 
 export const BardResponse: React.FC<{
   loadingState: boolean;
@@ -26,7 +27,7 @@ export const BardResponse: React.FC<{
           await delay(delayTimeToWaitForEnablingButton);
 
           const responseArea = document.getElementById(
-            `responseOfBard`
+            `${ServiceName.Bard}Response`
           ) as HTMLDivElement;
           responseArea.innerHTML = request.chatResponse as string;
           sendResponse({ message: Status.Ok });
@@ -50,7 +51,7 @@ export const BardResponse: React.FC<{
 
   return (
     <>
-      <div style={{ textAlign: "center", fontWeight: "bold" }}>Bard</div>
+      <ResponseTitle serviceName={ServiceName.Bard} />
       {props.loadingState ? (
         <div
           style={{
@@ -72,7 +73,7 @@ export const BardResponse: React.FC<{
         </div>
       ) : (
         <div
-          id="responseOfBard"
+          id={`${ServiceName.Bard}Response`}
           style={{
             paddingTop: "10px",
             overflowY: "auto",

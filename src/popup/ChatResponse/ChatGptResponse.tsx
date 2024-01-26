@@ -9,6 +9,7 @@ import {
   delayTimeToWaitForEnablingButton,
 } from "../../utils/utils";
 import { ChromeTabs } from "../types";
+import { ResponseTitle } from "../components/ResponseTitle";
 
 export const ChatGptResponse: React.FC<{
   loadingState: boolean;
@@ -27,12 +28,10 @@ export const ChatGptResponse: React.FC<{
           await delay(delayTimeToWaitForEnablingButton);
 
           const responseArea = document.getElementById(
-            `responseOfChatGPT`
+            `${ServiceName.ChatGPT}Response`
           ) as HTMLDivElement;
-          if (responseArea !== null) {
-            responseArea.innerHTML = request.chatResponse as string;
-            sendResponse({ message: Status.Ok });
-          }
+          responseArea.innerHTML = request.chatResponse as string;
+          sendResponse({ message: Status.Ok });
         }
       });
     })();
@@ -53,7 +52,7 @@ export const ChatGptResponse: React.FC<{
 
   return (
     <>
-      <div style={{ textAlign: "center", fontWeight: "bold" }}>ChatGPT</div>
+      <ResponseTitle serviceName={ServiceName.ChatGPT} />
       {props.loadingState ? (
         <>
           <div
@@ -78,7 +77,7 @@ export const ChatGptResponse: React.FC<{
       ) : (
         <>
           <div
-            id="responseOfChatGPT"
+            id={`${ServiceName.ChatGPT}Response`}
             style={{
               paddingTop: "10px",
               overflowY: "auto",

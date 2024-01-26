@@ -9,6 +9,7 @@ import {
   delayTimeToWaitForEnablingButton,
 } from "../../utils/utils";
 import { ChromeTabs } from "../types";
+import { ResponseTitle } from "../components/ResponseTitle";
 
 export const CopilotResponse: React.FC<{
   loadingState: boolean;
@@ -27,7 +28,7 @@ export const CopilotResponse: React.FC<{
           await delay(delayTimeToWaitForEnablingButton);
 
           const responseArea = document.getElementById(
-            `responseOfCopilot`
+            `${ServiceName.Copilot}Response`
           ) as HTMLDivElement;
           responseArea.innerHTML = request.chatResponse as string;
           sendResponse({ message: Status.Ok });
@@ -49,7 +50,7 @@ export const CopilotResponse: React.FC<{
   };
   return (
     <>
-      <div style={{ textAlign: "center", fontWeight: "bold" }}>Copilot</div>
+      <ResponseTitle serviceName={ServiceName.Copilot} />
       {props.loadingState ? (
         <>
           <div
@@ -74,7 +75,7 @@ export const CopilotResponse: React.FC<{
       ) : (
         <>
           <div
-            id="responseOfCopilot"
+            id={`${ServiceName.Copilot}Response`}
             style={{
               paddingTop: "10px",
               overflowY: "auto",

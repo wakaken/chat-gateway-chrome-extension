@@ -31,7 +31,7 @@ export const PromptForm: React.FC<{
 
     ChatConfig.titleAndUrlList.forEach(async (item) => {
       if (props.chromeTabs[item.title]) {
-        const responseArea = document.getElementById(`responseOf${item.title}`);
+        const responseArea = document.getElementById(`${item.title}Response`);
         if (responseArea !== null) {
           responseArea.innerHTML = "";
         }
