@@ -18,9 +18,9 @@ yarn dev
 # How to use
 1. Open popup from Chrome and a small window will open.
 2. Click "Open chat window" button and then the main chat-gateway window will open.
-3. Cliek "Open Chat Windows" button and then the web screens of ChatGPT, Bard, Claude and Copilot.
+3. Cliek "Open Chat Windows" button and then the web screens of ChatGPT, Bard, Claude and Copilot will open.
 4. Input some prompt text in the textarea and click send button.
-5. The prompt is sent to the screens and each AI service start generating answer.
+5. The prompt is sent to the screens and each AI service starts generating answer.
 6. The answers are sent back to the chat-gateway window and will be displayed in each response area.
 
 # Notes
